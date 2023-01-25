@@ -119,7 +119,7 @@ if ($_POST) {
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <!-- <script src="https://kit.fontawesome.com/da3f2c352c.js" crossorigin="anonymous"></script> -->
-   <link rel="stylesheet" href="signupcss.css">
+   <link rel="stylesheet" href="css/signupcss.css">
 
 </head>
 
