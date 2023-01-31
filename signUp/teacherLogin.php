@@ -12,7 +12,7 @@ if ($_POST) {
    $result = mysqli_query($conn, "SELECT * FROM teachers where login_name='$login_name' and password='$password'");
    $row = mysqli_fetch_array($result);
 
-   
+
    if (mysqli_num_rows($result) == 0) {
       echo "Tên đăng nhập hoặc mật khẩu không hợp lệ. Vui lòng kiểm tra lại. <a href='javascript: history.go(-1)'>Trở lại</a>";
       //echo '<p style="color: red">Tai khoan hoac mat khau khong chinh xac </p>';
@@ -28,7 +28,6 @@ if ($_POST) {
       // header("Location:page1.php");
       echo '<script language="javascript">alert("Đăng nhập thành công"); window.location="";</script>';
    }
-   
 }
 
 ?>
@@ -61,7 +60,8 @@ if ($_POST) {
          <label for="psw"><b>Password</b></label>
          <input type="password" placeholder="Enter Password" name="password" required>
 
-         <button type="submit">Login</button>
+         <!--<button type="submit">Login</button>-->
+         <a href="?teachers.teacher_id="><button type="submit">Sign up</button></a>
          <a href="register.php"><button type="button">Sign up</button></a>
 
          <label>

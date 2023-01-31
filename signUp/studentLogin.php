@@ -61,7 +61,8 @@ if ($_POST) {
          <label for="psw"><b>Password</b></label>
          <input type="password" placeholder="Enter Password" name="password" required>
 
-         <button type="submit">Login</button>
+         <!--<button type="submit">Login</button>-->
+         <a href="?students.student_id="><button type="submit">Sign up</button></a>
          <a href="register.php"><button type="button">Sign up</button></a>
 
          <label>

@@ -40,11 +40,11 @@
 
       <div class="imgcontainer">
          <img style="width:200px;height:200px;" src="default_avatar.png" alt="Avatar" class="avatar">
-         <div><strong>Chọn thành phần bạn muốn đăng nhập</strong></strong></div>
+         <div><strong>Chọn thành phần bạn muốn đăng kí</strong></strong></div>
          <a href="teacher.php"><button type="button">Giáo viên</button></a>
          <a href="student.php"><button type="button">Học sinh</button></a>
-         <a href="login.php"><button type="button">Đăng kí</button></a>
-         <a href="login.php"><button type="button">Trang chủ</button></a>
+         <a href="login.php"><button type="button">Đăng nhập</button></a>
+         <a href=""><button type="button">Trang chủ</button></a>
       </div>
       <!--<div class="containerr">
 
