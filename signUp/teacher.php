@@ -43,7 +43,7 @@ if ($_POST) {
             $result = mysqli_query($conn, $sql);
             if($result){
                
-               echo '<script language="javascript">alert("Đăng ký thành công"); window.location="";</script>';
+               echo '<script language="javascript">alert("Đăng ký thành công"); window.location="login.php";</script>';
                
             } else {
                echo '<script language="javascript">alert("Có lỗi trong quá trình xử lý"); window.location="";</script>';

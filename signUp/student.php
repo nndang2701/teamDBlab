@@ -42,7 +42,7 @@ if ($_POST) {
             $result = mysqli_query($conn, $sql);
             if ($result) {
 
-               echo '<script language="javascript">alert("Đăng ký thành công"); window.location="";</script>';
+               echo '<script language="javascript">alert("Đăng ký thành công"); window.location="login.php";</script>';
             } else {
                echo '<script language="javascript">alert("Có lỗi trong quá trình xử lý"); window.location="";</script>';
             }
@@ -177,9 +177,13 @@ if ($_POST) {
 
          <div class="clearfix">
             <a href="login.php">
+               <button type="submit" class="signupbtn">Sign Up</button>
+            </a>
+            <a href="login.php">
                <button type="button" class="cancelbtn">Cancel</button>
             </a>
-            <button type="submit" class="signupbtn">Sign Up</button>
+
+            <!--<button type="submit" class="signupbtn">Sign Up</button>-->
          </div>
       </div>
    </form>

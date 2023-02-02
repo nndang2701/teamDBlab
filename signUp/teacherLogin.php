@@ -12,6 +12,7 @@ if ($_POST) {
    $result = mysqli_query($conn, "SELECT * FROM teachers where login_name='$login_name' and password='$password'");
    $row = mysqli_fetch_array($result);
 
+   $teacher_id = $row['teacher_id'];
 
    if (mysqli_num_rows($result) == 0) {
       echo "Tên đăng nhập hoặc mật khẩu không hợp lệ. Vui lòng kiểm tra lại. <a href='javascript: history.go(-1)'>Trở lại</a>";
@@ -26,7 +27,12 @@ if ($_POST) {
    else if ($result) {
       // $_SESSION['user'] = $row;
       // header("Location:page1.php");
-      echo '<script language="javascript">alert("Đăng nhập thành công"); window.location="";</script>';
+      echo '<script language="javascript">alert("Đăng nhập thành công");
+      
+      </script>';
+      // window . location = "self.php";
+      //echo 'Dang nhap thanh cong';
+      header("Location:self.php?id=".urlencode($teacher_id)."&role=Teacher");
    }
 }
 
@@ -61,7 +67,8 @@ if ($_POST) {
          <input type="password" placeholder="Enter Password" name="password" required>
 
          <!--<button type="submit">Login</button>-->
-         <a href="?teachers.teacher_id="><button type="submit">Sign up</button></a>
+         <!-- <a href="?teachers.teacher_id="><button type="submit">Login</button></a> -->
+         <a href="self.php?id=<?php echo $teacher_id?>&role=teacher"><button type="submit">Login</button></a>
          <a href="register.php"><button type="button">Sign up</button></a>
 
          <label>
@@ -73,7 +80,7 @@ if ($_POST) {
          <a href="admin.php">
             <button type="button" class="cancelbtn">Login with admin</button>
          </a>
-         <a href="page1.php">
+         <a href="self.php">
             <button type="button" class="cancelbtn">Cancel</button>
          </a>
          <span class="psw"><a href="#">Forgot password?</a></span>
